@@ -1,0 +1,76 @@
+#box{
+    height:100px;
+    width:100px;
+    /* background-color:salmon; */
+    background-image:url("images/socks.jpg");
+    background-size:cover;
+    animation-name:box-move;
+    animation-duration:5s;
+    animation-fill-mode:forwards;
+    position:relative;
+}
+
+@keyframes box-move{
+    0%{
+        left:0;
+        top:0;
+        background-color:salmon;
+        transform:rotate(360deg);
+    }
+    25%{
+        left:0;
+        top:0;
+        background-color:salmon;
+        transform:rotate(0deg);
+    }
+    50%{
+        left:500px;
+        top:0;
+        transform:rotate(0deg);
+    }
+    100%{
+        left:500px;
+        top:100px;
+        background-color:purple;
+    }
+}
+
+#hover-example{
+    height:200px;
+    width:200px;
+    background-color:skyblue;
+    transition-property:background-color, height;
+    transition-duration:5s;
+
+}
+/* this is a pseudo class (:) */
+/* can be attached to ids class and elements */
+#hover-example:hover{
+    background-color:purple;
+    height:500px;
+    width:500px;
+}
+
+#media-test{
+    height:20vw;
+    width:20vw;
+    
+}
+
+@media screen and (max-width: 800px){
+    #media-test{
+        background-color:salmon;
+    }
+}
+
+@media screen and (min-width: 800px){
+    #media-test{
+        background-color:purple;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    #media-test{
+        background-color:red;
+    }
+}
